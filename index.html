@@ -334,11 +334,11 @@ button, .btn {
   });*/
 
 
-  // Paystack Payment Integration
+
   document.getElementById('paystackPaymentButton').addEventListener('click', function() {
             var handler = PaystackPop.setup({
-                key: 'pk_live_7f19625c635acb208369ad30633503152c8b4855', // Replace with your Paystack public key
-                email: document.getElementById('email').value, // Customer's email
+                key: 'pk_live_7f19625c635acb208369ad30633503152c8b4855',
+                email: document.getElementById('email').value, 
                 amount: 100000, // Amount in kobo (e.g., 100 NGN = 10000 kobo)
                 currency: 'NGN',
                 callback: function(response) {
