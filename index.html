@@ -233,8 +233,8 @@ button, .btn {
         <h2>Make Payment</h2>
         <p id="amountText" class="fs-5 fw-bold">Amount: ₦100,000</p>
         <p><em>Enable pop-up for this site to complete payment</em></p>
-        <p><em>Use Paystack</em></p>
-        <button id="monnifyPaymentButton" class="btn btn-success">Pay with Monnify</button>
+       
+        <!--<button id="monnifyPaymentButton" class="btn btn-success">Pay with Monnify</button>-->
         <button id="paystackPaymentButton">Pay with Paystack</button>
         <!-- PayPal Payment Button -->
         <div id="paypal-button-container"></div>
@@ -283,7 +283,7 @@ button, .btn {
     document.getElementById('payment').style.display = 'block';
   });
 
-  document.getElementById('monnifyPaymentButton').addEventListener('click', function () {
+  /*document.getElementById('monnifyPaymentButton').addEventListener('click', function () {
     MonnifySDK.initialize({
       amount: paymentAmount,
       currency: "NGN",
@@ -308,7 +308,7 @@ button, .btn {
         alert('Payment window closed.');
       }
     });
-  });
+  });*/
 
 
   // Paystack Payment Integration
