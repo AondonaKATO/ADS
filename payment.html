@@ -131,10 +131,10 @@ button, .btn {
   <h1>Welcome to Our Course</h1>
   <p>Sign up, make a payment, and join our learning group!</p>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact</a>
-    <a href="https://aondonakato.github.io/LearnHub/courses.html">LearnHub</a>
+    <a href="#">Home</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+    <a href="#">LearnHub</a>
   </nav>
 </header>
 
@@ -153,7 +153,7 @@ button, .btn {
           </div>
           <div class="col-md-12">
             <label for="course" class="form-label">Course:</label>
-            <input type="text" id="course" name="course" readonly class="form-control" />
+            <input type="text" id="course" name="course" readonly class="form-control" value="Frontend"/>
           </div>
           <div class="col-12 text-center">
             <button type="submit" class="btn btn-success">Continue to Payment</button>
@@ -169,7 +169,7 @@ button, .btn {
         <h2>Make Payment</h2>
         <p id="amountText" class="fs-5 fw-bold">Amount: ₦100,000</p>
         <p><em>Enable pop-up for this site to complete payment</em></p>
-        <button id="monnifyPaymentButton" class="btn btn-success">Pay with Monnify</button>
+        <!--button id="monnifyPaymentButton" class="btn btn-success">Pay with Monnify</button-->
         <button id="paystackPaymentButton">Pay with Paystack</button>
         <!-- PayPal Payment Button -->
         <div id="paypal-button-container"></div>
@@ -185,6 +185,7 @@ button, .btn {
       <div class="card-style text-center">
         <h2>Thank You!</h2>
         <p>Your payment was successful. Click below to join the learning group:</p>
+        <p>Make sure to download your receipt for confirmation</p>
         <div id="groupLinkContainer"></div>
         <br/><br/>
         <button onclick="printReceipt()" class="btn btn-dark">Print Receipt</button>
@@ -207,7 +208,7 @@ button, .btn {
 
     paymentAmount = price;
 
-    document.getElementById("course").value = courseName;
+    /*document.getElementById("course").value = courseName;*/
     document.getElementById("amountText").textContent = `Amount: ₦${price.toLocaleString()}`;
   });
 
@@ -250,7 +251,7 @@ button, .btn {
             var handler = PaystackPop.setup({
                 key: 'pk_live_7f19625c635acb208369ad30633503152c8b4855', // Replace with your Paystack public key
                 email: document.getElementById('email').value, // Customer's email
-                amount: 10000000, // Amount in kobo (e.g., 100 NGN = 10000 kobo)
+                amount: 10000, // Amount in kobo (e.g., 100 NGN = 10000 kobo)
                 currency: 'NGN',
                 callback: function(response) {
                     alert('Payment successful! Transaction reference: ' + response.reference);
