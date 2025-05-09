@@ -231,7 +231,7 @@ button, .btn {
     <div class="container">
       <div class="card-style text-center">
         <h2>Make Payment</h2>
-        <p id="amountText" class="fs-5 fw-bold">Amount: ₦100,000</p>
+        <p id="amountText" class="fs-5 fw-bold">Amount: ₦1,000</p>
         <p><em>Enable pop-up for this site to complete payment</em></p>
        
         <!--<button id="monnifyPaymentButton" class="btn btn-success">Pay with Monnify</button>-->
@@ -269,7 +269,7 @@ button, .btn {
 
   document.addEventListener("DOMContentLoaded", function () {
     const courseName = getQueryParam("course") || "No course selected";
-    const price = parseFloat(getQueryParam("price")) || 100000;
+    const price = parseFloat(getQueryParam("price")) || 1000;
 
     paymentAmount = price;
 
@@ -316,7 +316,7 @@ button, .btn {
             var handler = PaystackPop.setup({
                 key: 'pk_live_7f19625c635acb208369ad30633503152c8b4855', // Replace with your Paystack public key
                 email: document.getElementById('email').value, // Customer's email
-                amount: 10000, // Amount in kobo (e.g., 100 NGN = 10000 kobo)
+                amount: 100000, // Amount in kobo (e.g., 100 NGN = 10000 kobo)
                 currency: 'NGN',
                 callback: function(response) {
                     alert('Payment successful! Transaction reference: ' + response.reference);
