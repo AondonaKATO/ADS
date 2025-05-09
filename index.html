@@ -185,6 +185,29 @@ button, .btn {
   
   disableRightClick();
   </script>
+
+
+<script>
+
+
+  function blockKeys(e) {
+  
+    if (
+      e.key === "F12" || 
+      (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C" || e.key === "U")) ||
+      (e.ctrlKey && e.key === "U")
+    ) {
+      alert("This keyboard shortcut is disabled.");
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    }
+  }
+
+  document.addEventListener('keydown', blockKeys);
+  document.addEventListener('keypress', blockKeys);
+</script>
+
   
   <script src="https://sdk.monnify.com/plugin/monnify.js"></script> <!-- Monnify SDK -->
       <script src="https://js.paystack.co/v1/inline.js"></script> <!-- Paystack SDK -->
@@ -192,8 +215,8 @@ button, .btn {
 <body>
 
 <header>
-  <h1>Welcome to Our Course</h1>
-  <p>Sign up, make a payment, and join our learning group!</p>
+  <h1>Edura Global Limited</h1>
+  <p>Become a successful Online Tutor!</p>
   <nav>
     <a href="#">Home</a>
     <a href="#">About Us</a>
@@ -323,7 +346,7 @@ button, .btn {
                     document.getElementById('payment').style.display = 'none';
                     document.getElementById('confirmation').style.display = 'block';
                     document.getElementById('groupLinkContainer').innerHTML =
-  '<a href="https://example.com/learning-group" target="_blank">Join Learning Group</a>';
+  '<a href="http://bit.ly/4jIAEDq" target="_blank">Join Learning Group</a>';
 
                 },
                 onClose: function() {
