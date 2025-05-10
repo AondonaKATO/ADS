@@ -339,7 +339,7 @@ button, .btn {
             var handler = PaystackPop.setup({
                 key: 'pk_live_a339eb8b780e913a09e637127e988ebc24d4a6e3',
                 email: document.getElementById('email').value, 
-                amount: 10000, // Amount in kobo (e.g., 100 NGN = 10000 kobo)
+                amount: 100000, // Amount in kobo (e.g., 100 NGN = 10000 kobo)
                 currency: 'NGN',
                 callback: function(response) {
                     alert('Payment successful! Transaction reference: ' + response.reference);
